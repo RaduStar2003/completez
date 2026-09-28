@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Completez</title>
+<meta name="description" content="Completează și semnează formulare românești din PDF sau poză. Profilurile și semnătura rămân doar pe dispozitivul tău.">
+<meta name="theme-color" content="#f1f2f6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f1118" media="(prefers-color-scheme: dark)">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Schibsted+Grotesk:wght@700;800&display=swap">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="app" id="app">
+  <header class="topbar">
+    <a class="brand" href="#document" data-go="document" aria-label="Completez, pagina documentului">
+      <span class="brand-word">Complet<b>ez</b></span>
+    </a>
+    <span class="brand-sub">formulare fără pix</span>
+    <span class="spacer"></span>
+    <button class="profile-chip" id="profileChip" type="button" aria-haspopup="dialog"></button>
+  </header>
+
+  <nav class="tabs" id="tabs" aria-label="Secțiuni">
+    <button class="tab" type="button" data-tab="document"><span class="tab-ico" data-icon="doc"></span><span>Document</span></button>
+    <button class="tab" type="button" data-tab="profiluri"><span class="tab-ico" data-icon="user"></span><span>Profiluri</span></button>
+    <button class="tab" type="button" data-tab="setari"><span class="tab-ico" data-icon="gear"></span><span>Setări</span></button>
+  </nav>
+
+  <main class="main" id="main">
+    <section class="view" id="view-document" aria-label="Document"></section>
+    <section class="view" id="view-profiluri" aria-label="Profiluri" hidden></section>
+    <section class="view" id="view-setari" aria-label="Setări" hidden></section>
+  </main>
+</div>
+
+<div class="lock" id="lock" hidden></div>
+<div id="modalRoot"></div>
+<div class="toasts" id="toasts" aria-live="polite"></div>
+<noscript><p style="padding:16px">Completez are nevoie de JavaScript ca să funcționeze.</p></noscript>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@pdf-lib/fontkit@1.1.1/dist/fontkit.umd.min.js"></script>
+<script src="js/font-arimo.js"></script>
+<script src="js/util.js"></script>
+<script src="js/store.js"></script>
+<script src="js/cnp.js"></script>
+<script src="js/schema.js"></script>
+<script src="js/labeler.js"></script>
+<script src="js/imaging.js"></script>
+<script src="js/docs.js"></script>
+<script src="js/exporter.js"></script>
+<script src="js/ai.js"></script>
+<script src="js/ui-editor.js"></script>
+<script src="js/ui-profiles.js"></script>
+<script src="js/ui-settings.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

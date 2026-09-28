@@ -1,0 +1,16 @@
+{
+  "name": "Completez",
+  "short_name": "Completez",
+  "description": "Completează și semnează formulare românești din PDF sau poză. Datele rămân pe dispozitivul tău.",
+  "lang": "ro",
+  "start_url": "./",
+  "scope": "./",
+  "display": "minimal-ui",
+  "background_color": "#f1f2f6",
+  "theme_color": "#f1f2f6",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
